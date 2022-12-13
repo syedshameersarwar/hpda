@@ -1,0 +1,23 @@
+Fact based vs Relational Model
+
+A fact-based data model, also known as a dimensional data model, organizes data around the 
+specific facts or events that are relevant to a particular subject. This type of model is 
+often used in data warehouses and business intelligence systems, where the goal is to 
+provide a clear and concise view of the data that is most relevant to decision-making.
+
+In contrast, a relational data model is based on the concept of organizing data into tables 
+or relations, where each table represents a specific entity or concept in the real world. 
+Each table consists of rows (records) and columns (attributes), and the relationships between 
+tables are established through the use of common key values.
+
+The impact of a fact-based data model on a relational data model is largely a matter of 
+perspective. Some people may view the fact-based model as an alternative to the relational 
+model, while others may see it as a complement to the relational model. In either case, 
+the fact-based model provides a way to organize and analyze data that is focused on the 
+specific facts or events that are relevant to a particular subject, rather than on the 
+underlying structure of the data. This can make it easier to understand and analyze the 
+data, and can help to identify trends and patterns that might not be apparent using a 
+purely relational approach.
+
+In our cases, going from relational model would make the data more dense and denormalized 
+as we will start storing timestamped article versions.

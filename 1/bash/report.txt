@@ -1,0 +1,45 @@
+Bash is a Unix-based command line interpreter that allows users to perform various tasks such as file management, program execution, and data manipulation. It utilizes a number of core concepts that make it a powerful tool for command line operations.
+One of these concepts is special characters and escaping. Bash uses certain special characters, such as the dollar sign ($), the exclamation mark (!) and the asterisk (), to perform specific operations. These characters have special meanings in Bash and must be escaped if we want to use them literally in our commands. For example, if we want to search for a file named "file" in the current directory, we would need to escape the asterisk with a backslash () like this:
+
+$ ls file*
+
+This tells Bash to interpret the asterisk as a normal character and not as a wildcard.
+
+Another core concept in Bash is redirection. This allows us to redirect the output of a command to a file or to another command. This is done using the greater than (>) and less than (<) symbols. For example, we can redirect the output of the ls command to a file named "list.txt" like this:
+
+$ ls > list.txt
+
+This would create a file named "list.txt" and fill it with the output of the ls command.
+
+Another useful concept in Bash is piping. This allows us to chain multiple commands together and use the output of one command as the input of another. This is done using the vertical bar (|) symbol. For example, we can use the output of the ls command as the input for the grep command to search for a specific file like this:
+
+$ ls | grep file
+
+This would search the output of the ls command for the string "file" and only show the lines that contain that string.
+
+Variables are another important concept in Bash. These allow us to store and manipulate data in our commands. Variables are assigned using the equal sign (=) and accessed using the dollar sign ($). For example, we can assign the value "hello" to a variable named "message" like this:
+
+$ message="hello"
+
+We can then access the value of this variable using the dollar sign like this:
+
+$ echo $message
+hello
+
+Bash also allows us to perform basic arithmetic operations using the $((expression)) syntax. For example, we can add two numbers like this:
+
+$ a=5
+$ b=6
+$ c=$((a+b))
+$ echo $c
+11
+
+There are many common commands that are useful in Bash beyond the examples we have seen here. Some of these include:
+ls: Lists the files in a directory
+cd: Changes the current working directory
+mkdir: Creates a new directory
+touch: Creates a new file
+cat: Displays the contents of a file
+grep: Searches for a specific string in a file or the output of a command
+
+When working with Bash, it is important to avoid easily avoidable errors. This can be done by using the -i flag to enable interactive mode, which will prompt the user for confirmation before executing potentially dangerous commands. It is also a good idea to use the -v flag to enable verbose mode, which will show more detailed information about the commands being executed. This can help us identify and troubleshoot errors.

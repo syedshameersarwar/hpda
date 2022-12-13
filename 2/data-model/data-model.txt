@@ -1,0 +1,79 @@
+Relational:
+    Article (Table):
+        Title (PK)
+        Text 
+        Category_ID (FK -> Categories[ID])
+    Categories (Table):
+        ID (PK)
+        Name (UNIQUE)
+    Article Links (Table):
+        Article_Title (FK -> Article[Title])
+        Linked_Article_Title (FK > Article[Title])
+        { Composite PK = Article_Title + Linked_Article_Title}
+
+  Operations:
+    SELECT a.Title, a.Text, c.Name FROM Articles a 
+    INNER JOIN Categories c ON a.Category_ID = c.ID 
+    WHERE a.Title = '<given title>';
+
+    SELECT a.Title, a.Text, c.Name FROM Articles a 
+    INNER JOIN Categories c ON a.Category_ID = c.ID 
+    INNER JOIN Article Links l ON l.Linked_Article_Title = a.Title 
+    WHERE l.Article_Title = '<given title>';
+
+    SELECT a.Title, a.Text, c.Name FROM Articles a 
+    INNER JOIN Categories c ON a.Category_ID = c.ID 
+    WHERE c.Name = '<given category name>';
+
+
+Columnar:
+    Article (Table):
+        <Title/Category> (Row Key)
+        Text [Column family: a]
+        Reference (collection; stores title name only) [Column family: b]
+  Operations:
+    SCAN Article table with ROW KEY Prefix of '<given article name>'
+
+    SCAN Article table with ROW KEY Prefix of '<given article name>' => Store results
+    RUN multiple SCANs with ROW KEY Prefix for each article name from above results 
+
+    SCAN Article table with ROW KEY Suffix of '<given category name>'
+
+Key value:
+    Key:                  Value:
+        article/<title>    <text></text>, <category_id></category_id>, <references> <title> </title>, <title> </title> </references>
+        category/<id>      <name></name>
+    
+    Operations:
+        GET article by title with Key article/<title> => GET category name with category/<category_id from first step>
+
+        Similar Idea as above for next two operations 
+
+Document:
+    <Article>
+        <title> </title>
+        <category_id> </category_id>
+        <text> </text>
+        <References> 
+            <title> </title>
+            <title> </title>
+        </References>
+    </Article>
+
+    <Categories> 
+        <Name> </Name>
+    </Categories>
+
+    Operations:
+        Queries will require multi joins for given operations (includig self join for 2nd operation)
+
+Graph DB:
+    Article (Node)
+        Title 
+        Text 
+        References
+    
+    Categories (Node)
+        Name
+    
+    Relation: Article belongs to a category

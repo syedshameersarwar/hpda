@@ -1,0 +1,14 @@
+Performance is a term that can refer to a number of different characteristics of a
+data analytics application. These characteristics may include things like the speed 
+at which the application can process data, the amount of data it can handle at once, 
+and the accuracy of its results. In general, a high-performance data analytics application
+is one that is able to quickly and accurately process large amounts of data.
+
+There are several reasons why a use case might require a high-performance data analytics
+application. For example, if the data being analyzed is very large or complex, 
+a high-performance application may be needed to quickly and accurately process 
+and make sense of the data. Additionally, if the results of the data analysis are
+being used to make critical decisions or take immediate action, a high-performance 
+application may be necessary in order to provide timely and accurate results.↳
+
+In summary, a high-performance data analytics application is one that is able to quickly and accurately process large amounts of data, and is well-suited to use cases that require fast and accurate analysis of complex data.

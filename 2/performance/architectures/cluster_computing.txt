@@ -1,0 +1,5 @@
+One example of a supercomputer architecture is cluster computing, where a group of 
+interconnected computers (or "nodes") work together to perform high-speed computing. 
+In this architecture, each node typically has its own processor and memory, and is 
+connected to the other nodes via a high-speed network. This allows the nodes to share 
+data and work together to perform complex calculations.

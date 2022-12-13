@@ -1,0 +1,4 @@
+Another example of a supercomputer architecture is distributed memory, where each node 
+in the system has its own memory and is connected to the other nodes via a high-speed 
+network. In this architecture, the nodes can access each other's memory as needed in 
+order to perform calculations, allowing for very high levels of parallelism and performance.

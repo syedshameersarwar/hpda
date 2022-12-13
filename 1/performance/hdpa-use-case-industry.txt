@@ -1,0 +1,22 @@
+One recent high powered data analytics use case from the industry is the use of
+data analytics by the National Football League (NFL) to analyze player performance 
+and improve team strategies.
+
+The NFL processes a large amount of data from various sources, including player and 
+team statistics, game footage, and player health data. This data is used to 
+identify trends and patterns in player performance, such as individual strengths and weaknesses, 
+and to develop strategies for improving team performance.
+
+The workflow for this use case involves the collection and integration of data from 
+multiple sources,  followed by advanced analytics and machine learning algorithms to
+identify trends and patterns. The process is run continuously, 
+with data being collected and analyzed on a regular basis to support 
+real-time decision making by teams and coaches.
+
+In terms of the 5V challenges of big data, the NFL's use of data analytics involves 
+dealing with a large volume of data, with each game generating thousands of data points. 
+The data is also highly varied, with multiple sources and types of data being 
+integrated into the analysis. The data is also generated and processed at high velocity, 
+with real-time analysis and decision making being critical for success. Finally, 
+the data is of high value to the NFL and its teams, with the insights generated 
+being used to improve player performance and team strategies.

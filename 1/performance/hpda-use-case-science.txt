@@ -1,0 +1,30 @@
+One recent high-powered data analytics use case from science is the analysis of data
+from the Large Hadron Collider (LHC) at CERN. In this use case, data from the 
+LHC experiments is processed to search for new particles and phenomena in the universe.
+
+The LHC produces vast amounts of data, with approximately 25 petabytes of data being
+generated annually. The data analytics workflow for analyzing this data involves 
+several steps, including data collection, filtering, and analysis. 
+The entire workflow can take several months to complete, depending on 
+the complexity of the analysis.
+
+The 5V challenges of big data apply to this use case in the following ways:
+
+Volume: 
+As mentioned, the LHC generates a large amount of data, which must be processed in 
+order to extract useful information.
+
+Velocity: 
+The data must be processed quickly in order to keep up with the high rate at which
+it is generated.
+
+Variety: 
+The data comes from a variety of sources, including detectors and other 
+instruments, and has different formats and structures.
+
+Veracity: 
+The data must be reliable and accurate in order to provide meaningful results.
+
+Value: 
+The data must be used effectively in order to make new discoveries and 
+advance our understanding of the universe.

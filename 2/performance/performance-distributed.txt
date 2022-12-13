@@ -1,0 +1,18 @@
+When multiple computers are interconnected to form a distributed system, the overall 
+performance of the system can be expanded in several ways. One of the key ways that 
+the performance of a distributed system can be expanded is by increasing the number 
+of computers that are interconnected. This allows the system to distribute its workload
+across multiple machines, which can increase the overall speed and efficiency of the system.
+
+Another way that the performance of a distributed system can be expanded is by implementing 
+effective communication and coordination protocols between the different computers. 
+This allows the system to efficiently share data and distribute tasks among the different 
+machines, which can improve the overall performance of the system.
+
+The TOP500 list provides a number of performance characteristics for the world's fastest 
+supercomputers. Some of the performance characteristics provided in the list include 
+the speed of the supercomputer, measured in floating-point operations per second (FLOPS); 
+the number of processors and cores used by the supercomputer; and the amount of memory 
+available to the supercomputer. Other performance characteristics provided in the list 
+include the amount of power consumed by the supercomputer, and the location and type of 
+organization that operates the supercomputer.

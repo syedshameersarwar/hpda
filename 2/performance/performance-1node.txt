@@ -1,0 +1,40 @@
+Performance in a computer system typically refers to the amount of work that the system 
+can perform in a given period of time, or how quickly it can complete tasks. This can 
+be affected by a number of factors, including the speed of the processor, the amount 
+of memory (RAM) available, the speed and size of the storage (hard drive or solid state drive),
+and the efficiency of the operating system.
+
+Some relevant characteristics for a single computer system, such as a server or desktop, include:
+
+Processor: The central processing unit (CPU) is the brain of the computer and is responsible 
+for executing most of the instructions that the system performs. The speed of the 
+processor, measured in GHz, can affect the overall performance of the system.
+
+Memory (RAM): The system's memory (random access memory) is used to store data and 
+instructions that the processor is currently working on. The more memory a system has, 
+the more data it can store and manipulate at once, which can improve its performance.
+
+Storage: The storage device, such as a hard drive or solid state drive, is used to store 
+the system's operating system, programs, and data. The speed and size of the storage can 
+affect how quickly the system can access and use this information, which can impact its 
+performance.
+
+Operating system: The operating system (OS) is the software that manages the system's hardware 
+and provides a platform for running other programs. The efficiency of the OS can affect the 
+overall performance of the system.
+
+Typical values for a decent computer system (as of 2021) would depend on the 
+specific components and configuration of the system, but some general 
+guidelines for a system that would provide good performance include:
+
+Processor: A CPU with a clock speed of at least 3-4 GHz, with multiple cores for better 
+performance on multi-threaded tasks.
+
+Memory: At least 8 GB of RAM, although 16 GB or more is recommended for better performance, 
+especially for tasks that require a lot of memory, such as gaming or video editing.
+
+Storage: A solid state drive (SSD) with at least 500 GB of storage space, which provides 
+faster access to data than a traditional hard drive.
+
+Operating system: A modern and efficient OS, such as Windows 10 or macOS, that is 
+well-optimized for the hardware of the system.
