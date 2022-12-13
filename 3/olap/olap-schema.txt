@@ -1,0 +1,24 @@
+The data that should be part of the fact table would be time spent on the website, as this is the 
+key metric that we want to analyze. The other attributes, such as IP address, country of visitor, 
+city of visitor, access date, and browser's user agent, would be dimensions that provide context for 
+the time spent on the website. These dimensions can be used to slice and dice the data in different ways 
+to gain insights into how users are accessing the Wikipedia website.
+
+A star schema is a common way to map an OLAP cube to a relational model. The central table in a star 
+schema is the fact table, which contains the metrics or facts that we want to analyze. The dimensions 
+are represented by separate tables that are linked to the fact table via foreign key relationships. 
+For our Wikipedia logs data, we could create a star schema with the following tables:
+
+time_spent_fact: 
+    contains the time spent on the website for each user, along with a foreign key to the 
+    date_dimension, location_dimension and browser_dimension tables
+
+date_dimension:  
+    contains the access date, along with attributes such as year, month, and day
+
+location_dimension: 
+    contains the country and city of the visitor, along with attributes such as region and time zone
+
+browser_dimension: 
+    contains the user agent for the browser used by the visitor, along with attributes such as 
+    browser type and version
