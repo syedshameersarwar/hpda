@@ -1,0 +1,7 @@
+function map(k, doc) {
+    if (doc.fieldB == "something"){
+        emit(k, doc.fieldA)
+    }
+}
+
+function reduce() { # nothing here }

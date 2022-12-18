@@ -1,0 +1,11 @@
+function (k, doc) {
+    emit(doc.groupfield, doc.fieldA);
+}
+
+function reduce(k, values) {
+   sum := 0
+   while (values.hasNext()) {
+        sum = sum + values.next().get();
+    }
+   emit (k, sum)
+}

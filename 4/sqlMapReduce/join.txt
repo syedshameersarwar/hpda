@@ -1,0 +1,29 @@
+def map1(k, doc) {
+    line = value.toString()
+    words = line.split(",")
+    id = words[0].trim()
+    f1 = words[1].trim()
+    emit(id, "S1_" + f1)
+}
+
+def map2(k, doc) {
+    line = value.toString()
+    words = line.split(",")
+    id = words[1].trim()
+    f2 = words[2].trim()
+    emit(id, "S2_" + f2)
+}
+
+def reduce(k, values) {
+    while (values.hasNext()) {
+        value = values.next().toString();
+        words = currValue.split("~");
+        if( words[0].equals("S1") ) {
+            f1 = words[1].trim();
+        }
+        else if(words[0].equals("S2")) {
+            f2 = words[1].trim();
+        }  
+        emit(f1, f2)
+    }
+}
