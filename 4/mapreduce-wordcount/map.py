@@ -1,6 +1,10 @@
+#!/usr/bin/python3
 import sys
 import json
-import csv
+
+import nltk 
+nltk.data.path.append('/home/shameer/nltk_data')
+# nltk.download('wordnet')
 
 from nltk.tokenize import RegexpTokenizer
 from nltk.stem import WordNetLemmatizer
@@ -22,12 +26,13 @@ def emit(key, value):
 
 def read_input():
     files = []
+    sys_lines = sys.stdin.readlines()
     if len(sys.argv) > 1:
         for file in sys.argv[1:]:
             with open(file, 'r') as f:
                 files.append({"name": file, "lines": f.readlines()})
     else:
-        files.append({"name": "stdin", "lines": sys.stdin.readlines()})
+        files.append({"name": "stdin", "lines": sys_lines})
     return files
 
 
@@ -36,6 +41,7 @@ def map(key, value):
     words = tokenizer.tokenize(line)
     line_stem_words = [snow_stemmer.stem(w) for w in words]
     line_lemmatized_words = [lemmatizer.lemmatize(w) for w in words]
+
     line_word_count = len(words)
     line_stemmed_list = [
         (w, line_stem_words.count(w)) for w in set(line_stem_words)]

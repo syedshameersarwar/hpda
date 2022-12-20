@@ -1,12 +1,18 @@
+#!/usr/bin/python3
 import json
 import csv
 import sys
+import logging
 
 
 def read_input():
     inn = sys.stdin.read().split()
-    file = inn[0]
-    keys = json.loads(inn[1])
+    file, list_of_dicts = inn[0], inn[1:]
+    keys = []
+    for l in list_of_dicts:
+        if l != file:
+            for el in json.loads(l):
+                keys.append(el)
     return file, keys
 
 
