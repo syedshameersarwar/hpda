@@ -1,0 +1,42 @@
+[Input - ID, Name, Email, ModuleCodes]
+                |
+                |
+                v
+[ Map - id, module_code] [4711, ['HPDA', 'MODULE2']] 
+                |
+                |
+                v
+[ Filter - "HPDA" in t[1] (module_code)] [4711, ['HPDA', 'MODULE2']]
+                |
+                |
+                v
+               / \
+              /   \ 
+             /     \
+            v       v
+[Write- out.csv]   [ FlatMap - [(id1, module_code1), 
+                                (id1, module_code2),  [(4711, 'HPDA'), (4711, 'MODULE2')]
+                                (id2, module_code1) 
+                               ] 
+                            |
+                            |
+                            |
+                            v
+                          /   \
+                         /     \
+                        /       \ 
+                       /         \
+                      /           \  
+                 v --- v           v   
+   [Join - with itself]          [ Group - by course_code 
+    [None, [['4711', 'HPDA'],      [(module_code1, [(id1, module_code1), (id2, module_code1) ])]
+    ['4711', 'MODULE2']],           ]    [('HPDA', [(4711, 'HPDA')]), ('MODULE2', [(4711, 'MODULE2')])]
+    [['4711', 'MODULE2'],                        |
+    ['4711', 'HPDA']], None]                     |
+                                                 |
+                                                 |
+                                                 |
+                                                 |
+                                                 v
+                                    [ Reduce - by count/ len  [ (module_code1, count) , (module_code2, count)]]
+                                            [('HPDA', 1), ('MODULE2', 1)]
