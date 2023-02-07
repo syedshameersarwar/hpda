@@ -36,7 +36,7 @@ spark = SparkSession \
 cols = ["crimedesc", "frequency"]
 
 df_pd = pd.read_csv('data.csv')
-df_spark = sparkDF = spark.createDataFrame(df_pd)
+df_spark = spark.createDataFrame(df_pd)
 
 rdd = df_spark.rdd
 
