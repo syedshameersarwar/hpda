@@ -17,7 +17,7 @@ def map2(k, doc) {
 def reduce(k, values) {
     while (values.hasNext()) {
         value = values.next().toString();
-        words = currValue.split("~");
+        words = currValue.split("_");
         if( words[0].equals("S1") ) {
             f1 = words[1].trim();
         }

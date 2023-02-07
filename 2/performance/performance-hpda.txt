@@ -11,4 +11,5 @@ and make sense of the data. Additionally, if the results of the data analysis ar
 being used to make critical decisions or take immediate action, a high-performance 
 application may be necessary in order to provide timely and accurate results.↳
 
-In summary, a high-performance data analytics application is one that is able to quickly and accurately process large amounts of data, and is well-suited to use cases that require fast and accurate analysis of complex data.
+In summary, a high-performance data analytics application is one that is able to quickly and accurately process large amounts of data, 
+and is well-suited to use cases that require fast and accurate analysis of complex data.
