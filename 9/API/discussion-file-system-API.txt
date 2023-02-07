@@ -1,0 +1,31 @@
+A HTTP-API service for exposing a hierarchical file system can have the following syntax and semantics:
+
+1. Upload a file:
+    Method: PUT
+    URL: /files/{path}
+    Body: binary file data
+    Response: 201 (Created) if the file was successfully uploaded, 200 (Updated) if the file was successfully uploaded, 400 (Bad Request) if the request is malformed
+
+2. Download a file:`
+    Method: GET
+    URL: /files/{path}
+    Response: binary file data if the file exists, 404 (Not Found) if the file does not exist
+
+3. Create a directory:
+    Method: MKCOL
+    URL: /files/{path}
+    Response: 201 (Created) if the directory was successfully created, 400 (Bad Request) if the request is malformed, 409 (Conflict) if a file already exists at the given path
+
+4. List contents of a directory:
+    Method: GET
+    URL: /files/{path}
+    Response: JSON array of file and directory names in the directory, 404 (Not Found) if the directory does not exist
+
+5. Delete a file or directory:
+    Method: DELETE
+    URL: /files/{path}
+    Response: 200 (OK) if the file or directory was successfully deleted, 404 (Not Found) if the file or directory does not exist.
+
+Note: The above syntax and semantics are only suggestions and can be adjusted to fit the 
+      specific needs of the API. The API can also implement additional functionality such 
+      as moving or copying files and directories.

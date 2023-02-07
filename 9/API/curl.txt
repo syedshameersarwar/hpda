@@ -1,0 +1,66 @@
+curl -i -H "Content-Type: application/json" -X POST -d '{"title":"Read a book"}' http://localhost:5000/todo/api/v1.0/tasks
+HTTP/1.1 201 CREATED
+Server: Werkzeug/2.2.2 Python/3.10.6
+Date: Tue, 07 Feb 2023 13:22:06 GMT
+Content-Type: application/json
+Content-Length: 102
+Connection: close
+
+{
+  "task": {
+    "description": "",
+    "done": false,
+    "id": 3,
+    "title": "Read a book"
+  }
+}
+
+
+curl -i http://localhost:5000/todo/api/v1.0/tasks/3
+HTTP/1.1 200 OK
+Server: Werkzeug/2.2.2 Python/3.10.6
+Date: Tue, 07 Feb 2023 13:23:05 GMT
+Content-Type: application/json
+Content-Length: 102
+Connection: close
+
+{
+  "task": {
+    "description": "",
+    "done": false,
+    "id": 3,
+    "title": "Read a book"
+  }
+}
+
+curl -i http://localhost:5000/todo/api/v1.0/tasks
+HTTP/1.1 200 OK
+Server: Werkzeug/2.2.2 Python/3.10.6
+Date: Tue, 07 Feb 2023 13:29:29 GMT
+Content-Type: application/json
+Content-Length: 548
+Connection: close
+
+{
+  "tasks": [
+    {
+      "description": "Milk, Cheese, Pizza, Fruit, Tylenol",
+      "done": false,
+      "title": "Buy groceries",
+      "uri": "http://localhost:5000/todo/api/v1.0/tasks/1"
+    },
+    {
+      "description": "Need to find a good Python tutorial on the web",
+      "done": false,
+      "title": "Learn Python",
+      "uri": "http://localhost:5000/todo/api/v1.0/tasks/2"
+    },
+    {
+      "description": "",
+      "done": false,
+      "title": "Read a book",
+      "uri": "http://localhost:5000/todo/api/v1.0/tasks/3"
+    }
+  ]
+}
+
