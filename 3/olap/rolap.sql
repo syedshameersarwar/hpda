@@ -178,7 +178,7 @@ GROUP BY
   d.month,
   l.country;
 
-ELECT
+SELECT
   SUM(f.time_spent),
   d.month,
   l.country
